@@ -15,6 +15,7 @@ try {
     )";
 
     // Voeg hier de regel toe die het SQL-statement in $sql uitvoert.
+    $conn->exec($sql);
     // Controleer daarna in MySQL Workbench de tabel.
     
     echo "Table created.";
