@@ -19,6 +19,7 @@ try {
     for($i=0; $i<$result->rowCount(); $i++) {
         $row = $result->fetch(PDO::FETCH_ASSOC);
         echo "<tr>";
+        print_r($row);
         // VUL AAN zodat alle inhouden en tijdstippen worden getoond
         echo "</tr>";
     }
