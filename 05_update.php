@@ -8,8 +8,14 @@ try {
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $stmt = $conn->prepare("UPDATE messages SET inhoud='Testberichtje' WHERE id=4");
+    $stmt = $conn->prepare("UPDATE `messages` SET inhoud='Testberichtje' WHERE id=4");
 
+    //De lijn code bovenaan wordt uitgevoerd
+    $stmt->execute();
+
+    //Nakijken hoeveel rijen er zijn aangepast
+    $aantal_aangepast = $conn->rowCount;
+    
     // zorg dat de database ge-update wordt
     // en getoond wordt hoeveel rijen aangepast zijn
     
