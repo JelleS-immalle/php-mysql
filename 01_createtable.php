@@ -18,6 +18,8 @@ try {
     $conn->exec($sql);
     // Controleer daarna in MySQL Workbench de tabel.
     
+    // De tabel wordt toegevoegd en ik heb geëxperimenteerd met de rechten van de user.
+
     echo "Table created.";
 }
 catch(PDOException $e)
